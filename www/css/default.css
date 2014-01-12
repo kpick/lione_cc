@@ -1,0 +1,92 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline}
+body { margin:0; padding:0;border:0;width:100%;background:#fff;min-width:600px; font-size:90%; line-height:1.5}
+
+a { color:#369; }
+h1, h2, h3 { margin:.8em 0 .2em 0; padding:0;}
+p {margin:.4em 0 .8em 0; padding:0;}
+img {margin:10px 0 5px;}
+strong {font-size: 1.15em;}
+
+/* Header styles */
+#header { clear:both; float:left; width:100%; }
+#header { border-bottom:1px solid #000;}
+#header p, #header h1, #header h2 { padding:.4em 15px 0 15px; margin:0;}
+#header ul {clear:left;float:left;width:100%;list-style:none;margin:10px 0 0 0;padding:0;}
+#header ul li {display:inline;list-style:none;margin:0;padding:0;}
+#header ul li a {display:block;float:left;margin:0 0 0 1px;padding:3px 10px;text-align:center;background:#eee;color:#000;text-decoration:none;position:relative;left:15px;line-height:1.3em;}
+#header ul li a:hover {
+		background:#369;
+		color:#fff;
+	}
+#header ul li a.active,
+#header ul li a.active:hover {
+		color:#fff;
+		background:#000;
+		font-weight:bold;
+	}
+	#header ul li a span {
+		display:block;
+	}
+	
+
+	/* Footer styles */
+	#footer {
+		clear:both;
+		float:left;
+		width:100%;
+		border-top:1px solid #000;
+	}
+	#footer p {
+		padding:10px;
+		margin:0;
+	}
+
+
+	
+input[type=text], input[type=password], textarea {background: #F6F6F6; border: 1px solid #AAA; padding: 5px}
+input[type=submit] {-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; padding: 5px 10px}
+input.text, input.title, textarea, select {margin:0.5em 0; border:1px solid #bbb}
+input.text:focus, input.title:focus, textarea:focus, select:focus {border:1px solid #666}
+input.text, input.title {width: 300px; padding:5px}
+input.title {font-size:1.5em}
+select {background: #F6F6F6;}
+textarea {width: 390px; height: 250px; padding:5px}
+label {color: #1D6893; display: block; padding: 5px 0}
+fieldset {padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc;}
+legend {font-weight: bold; font-size:1.2em}
+
+
+table {border-collapse: separate; border-spacing: 0; margin-bottom: 1.4em; width:100%}
+th {font-weight: bold; background: #C3D9FF}
+table#event-table {width:50%}
+
+table th {background: #f2f2f2;  color: #333; padding: 6px 5px; vertical-align: middle; text-align:left;}
+table td {font-size: 13px; padding: 4px 10px 4px 5px; vertical-align: middle;  }
+td.event-name {font-size:14px; font-weight:bold;}
+tr.old-event {display:none;}
+td.event-details {font-size:15px; background-color:yellow;}
+
+img {vertical-align:text-top; border:0px;}
+
+.greenline {background-color: #C3D9FF}
+
+
+div#flashMessage {border: 1px solid grey;}
+div#authMessage {border: 1px solid black; background-color: #ff8844;}
+.message {background-color: #bbccff;}
+.error {background-color: #ff8844;}
+
+	
+.character-sheet-header { padding-left: 50px; padding-top: 10px; }
+
+
+#submitButton { 
+    height:  24px;
+    width:  76px;
+    float: left;
+    margin-left: 10px;
+    background: url('../img/submit_button.gif') top left no-repeat;
+}
+    #submitButton:hover {
+        background-position: left -27px;
+    }

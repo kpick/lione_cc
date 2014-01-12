@@ -1,0 +1,1 @@
+<?php echo $html->image('ren-faire.jpg')?>

@@ -1,0 +1,1 @@
+ALTER TABLE players ADD allergies varchar(1024);

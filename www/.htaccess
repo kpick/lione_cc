@@ -1,0 +1,58 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+<Files "htaccess_dist">
+    order allow,deny
+    deny from all
+</Files>
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Default handler
+DirectoryIndex index.php
+
+# php 5, apache 1 and 2
+<IfModule mod_php5.c>
+	# default memory limit to 64Mb
+	php_value memory_limit 64M
+	# to make sure register global is off
+	php_value register_globals 0
+	# max post size to 8Mb
+	php_value post_max_size 8388608
+	# upload size limit to 5Mb	
+	php_value upload_max_filesize 5242880
+	# hide errors, enable only if debug enabled
+	php_value display_errors 0
+</IfModule>
+
+## Apache2 deflate support if available
+##
+## Important note: mod_headers is required for correct functioning across proxies.
+##
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.[0678] no-gzip
+	BrowserMatch \bMSIE !no-gzip
+
+<IfModule mod_headers.c>	
+	Header append Vary User-Agent env=!dont-vary
+</IfModule>	
+	
+	# The following is to disable compression for actions. The reason being is that these
+	# may offer direct downloads which (since the initial request comes in as text/html and headers
+	# get changed in the script) get double compressed and become unusable when downloaded by IE.
+	SetEnvIfNoCase Request_URI action\/* no-gzip dont-vary
+	SetEnvIfNoCase Request_URI actions\/* no-gzip dont-vary
+	
+</IfModule>
+
+# Configure ETags
+<FilesMatch "\.(jpg|jpeg|gif|png|mp3|flv|mov|avi|3pg|html|htm|swf)$">
+	FileETag MTime Size
+</FilesMatch>

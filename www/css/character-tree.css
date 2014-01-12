@@ -1,0 +1,68 @@
+.rule-disabled {
+	outline: none;
+	height: 20px;
+	width: 100px;
+	display: block;
+	padding: 1px 0px 0px 20px;
+	color: grey;
+	cursor: pointer;
+}
+
+
+.rule-enabled {
+	outline: none;
+	background: url(../img/checkbox.gif) no-repeat;
+	height: 20px;
+	width: 100px;
+	display: block;
+	padding: 1px 0px 0px 20px;
+	color: blue;
+	cursor: pointer;
+}
+
+.rule-selected {
+	outline: none;
+	background: url(../img/checkbox.gif) no-repeat;
+	height: 20px;
+	width: 100px;
+	display: block;
+	padding: 1px 0px 0px 20px;
+	color: green;
+	background-position: left -25px;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+
+
+
+
+span.tooltip{
+    display:none;
+}
+
+.training-message-fail {
+    color:red;
+    font-weight:bold;
+}
+
+.training-message-success {
+    color:green;
+    font-weight:bold;
+}
+
+
+
+
+/* --- BUTTONS --- */
+
+
+
+
+
+.cancelButton {
+    margin-left:50px;
+}
+
+
+.tooltip-header {font-weight:bold;border: 1px solid grey;background-color:#f6a828;padding:3px;}
